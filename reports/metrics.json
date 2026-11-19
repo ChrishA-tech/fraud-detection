@@ -1,0 +1,66 @@
+{
+  "rows": 284807,
+  "fraud_rate": 0.0017,
+  "models": {
+    "logreg": {
+      "pr_auc": 0.7082,
+      "roc_auc": 0.9765,
+      "threshold": 0.9999,
+      "precision": 0.8444,
+      "recall": 0.7308,
+      "alerts": 45,
+      "fraud_caught": 38,
+      "fraud_missed": 14,
+      "false_alarms": 7,
+      "fraud_rate_test": 0.0012
+    },
+    "xgboost": {
+      "pr_auc": 0.7624,
+      "roc_auc": 0.9739,
+      "threshold": 0.2308,
+      "precision": 0.6964,
+      "recall": 0.75,
+      "alerts": 56,
+      "fraud_caught": 39,
+      "fraud_missed": 13,
+      "false_alarms": 17,
+      "fraud_rate_test": 0.0012
+    }
+  },
+  "label_delay": {
+    "drop_latest_0pct_of_train": {
+      "pr_auc": 0.7624,
+      "precision": 0.6964,
+      "recall": 0.75
+    },
+    "drop_latest_25pct_of_train": {
+      "pr_auc": 0.7601,
+      "precision": 0.7647,
+      "recall": 0.75
+    },
+    "drop_latest_50pct_of_train": {
+      "pr_auc": 0.7473,
+      "precision": 0.8125,
+      "recall": 0.75
+    }
+  },
+  "drift_top_psi": {
+    "V1": 1.014,
+    "V3": 0.7505,
+    "V28": 0.5319,
+    "V11": 0.3394,
+    "V25": 0.2863,
+    "V12": 0.2175,
+    "V15": 0.2174,
+    "V5": 0.1674,
+    "V22": 0.1643,
+    "V4": 0.148
+  },
+  "latency": {
+    "p50_ms": 1.4285,
+    "p95_ms": 1.7277,
+    "p99_ms": 2.33,
+    "budget_ms": 300,
+    "within_budget": true
+  }
+}
